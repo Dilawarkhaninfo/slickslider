@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
+    <!-- <link rel="stylesheet" href="./slick/slick-theme.css">
+    <link rel="stylesheet" href="./slick/slick.css"> -->
+    <title>Title</title>
+</head>
+
+<style>
+    .product1 img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        width: 20%;
+    }
+    
+    .product2 {
+        margin: 10px;
+        padding: 2%;
+        position: relative;
+        align-items: center;
+    }
+    
+    .slider-nav {
+        width: 35%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body>
+
+
+    <div class="">
+        <div class="slider-for d-flex">
+            <div class="product1">
+                <img src="./slick1.jpg" width="250px" height="auto" class="img-fluid" alt="slick-img1">
+            </div>
+            <div class="product1">
+                <img src="./slick2.jpg" width="250px" height="auto" class="img-fluid" alt="slick-img2">
+            </div>
+            <div class="product1">
+                <img src="./slick3.jpg" width="250px" height="auto" class="img-fluid" alt="slick-img3">
+            </div>
+            <div class="product1">
+                <img src="./slick4.jpg" width="250px" height="auto" class="img-fluid" alt="slick-img4">
+            </div>
+        </div>
+
+        <div class="slider-nav d-flex">
+            <div class="product2">
+                <img src="./slick1.jpg" width="50px" height="auto" class="img-fluid" alt="slick-img1">
+            </div>
+            <div class="product2">
+                <img src="./slick2.jpg" width="50px" height="auto" class="img-fluid" alt="slick-img2">
+            </div>
+            <div class="product2">
+                <img src="./slick3.jpg" width="50px" height="auto" class="img-fluid" alt="slick-img3">
+            </div>
+            <div class="product2">
+                <img src="./slick4.jpg" width="50px" height="auto" class="img-fluid" alt="slick-img4">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="./slick/slick.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: false,
+                centerMode: true,
+                focusOnSelect: true,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        dots: false
+                    }
+                }, {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        infinite: false
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        infinite: false
+                    }
+                }]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
